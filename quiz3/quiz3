@@ -1,4 +1,8 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
+num1 = rand();
+num2 = rand();
+num3 = rand();
 
 int main()
