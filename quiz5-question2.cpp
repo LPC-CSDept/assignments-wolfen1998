@@ -8,8 +8,11 @@ int main()
 {
     int N = 5 ;
     int M = 6 ;
-    int num = 2;
-    N *= N;
+    int num ;
+    for (num = 1; N <= 6; num++ )
+    {
+        
+    }
     cout << N << endl;
 
    
