@@ -9,65 +9,55 @@
 using namespace std;
 int main()
 {
+    int getRdnum();
     int i;
     srand(time(0));
-    ofstream oldnumber;
-    oldnumber.open("old_random.txt");
+    int old_number;
+    int randomnum;
 
     for (i = 1; i<=10; i++ )
     {
-        int randomnum;
-        int old_random;
+        cout << i;
+        if ( i = 1)
+        {
+            old_number = getRdnum();
+            ofstream old_num;
+            old_num.open("old.txt");
+            old_num << old_number;
+        }
         if (i > 1)
         {
-            ifstream oldnumber;
-            oldnumber.open("old_random.txt");
-            
-            
-            oldnumber >> old_random;
-
-
-
-        }
-        
-        int getRdnum();
-        
-        ofstream outputFile1;
-        outputFile1.open("random.txt");
-        
-        randomnum = getRdnum();
-        cout << randomnum << endl;
-        outputFile1 << randomnum << endl;
-
-        if (i == 1)
-        {
-            ofstream numbersFile;
-            numbersFile.open("numbers.txt", ios::app);
-            numbersFile << randomnum << "\n";
-        }
-        else 
-        {
-            if (randomnum > old_random)
+            int old_num;
+            randomnum = getRdnum();
+            ifstream read_old_number;
+            read_old_number.open("old.txt");
+            read_old_number >> old_num;
+            if ( randomnum > old_num)
             {
-                ofstream numbersFile;
-                numbersFile.open("numbers.txt", ios::app);
-                numbersFile << randomnum << "\n";
-                numbersFile.close();
+                ofstream write_numbers;
+                write_numbers.open("numbers.txt", ios::app);
+                write_numbers << randomnum << endl;
+                write_numbers.close();
+
             }
+
+        
         }
-        oldnumber << randomnum;
+        
+        
+        
         
 
     
         
         
-        }
+        
         
     }
     
 
 
-
+}
 int getRdnum()
 {
     int rdnum1;
