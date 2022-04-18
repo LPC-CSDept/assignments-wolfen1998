@@ -24,6 +24,8 @@ int main()
             ofstream old_num;
             old_num.open("old.txt");
             old_num << old_number;
+            old_num.close();
+
         }
         if (i > 1)
         {
@@ -41,7 +43,7 @@ int main()
 
             }
 
-        
+            randomnum = old_number;
         }
         
         
