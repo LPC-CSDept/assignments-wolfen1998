@@ -14,23 +14,57 @@ int main()
 
     for (i = 1; i<=10; i++ )
     {
-
-        int getRdnum();
         int randomnum;
-        ofstream outputFile;
-        outputFile.open("random.txt");
+        int old_random;
+        if (i != 1)
+        {
+            ofstream oldnumber;
+            oldnumber.open("old_random.txt");
+            oldnumber << old_random;
+
+
+
+        }
+        int randomnumber;
+        int isGreater();
+        
+        
+        int greater_or_not;
+        int getRdnum();
+        
+        ofstream outputFile1;
+        outputFile1.open("random.txt");
         
         randomnum = getRdnum();
-        outputFile << randomnum << endl;
-        int isGreater(randomnum);
-        int i;
-        cout << randomnum<< endl;
+        outputFile1 << randomnum << endl;
+
+        if (i == 1)
+        {
+            ofstream numbersFile;
+            numbersFile.open("numbers.txt");
+            numbersFile << randomnum << "\n";
+        }
+        else 
+        {
+            if (randomnum > old_random)
+            {
+                ofstream numbersFile;
+                numbersFile.open("numbers.txt");
+                numbersFile << randomnum << "\n";
+            }
+        }
+        
+
+    
+        
+        
+        }
         
     }
     
 
-}
-bool isGreater
+
+
 int getRdnum()
 {
     int rdnum1;
