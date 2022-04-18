@@ -11,37 +11,38 @@ int main()
 {
     int i;
     srand(time(0));
+    ofstream oldnumber;
+    oldnumber.open("old_random.txt");
 
     for (i = 1; i<=10; i++ )
     {
         int randomnum;
         int old_random;
-        if (i != 1)
+        if (i > 1)
         {
-            ofstream oldnumber;
+            ifstream oldnumber;
             oldnumber.open("old_random.txt");
-            oldnumber << old_random;
+            
+            
+            oldnumber >> old_random;
 
 
 
         }
-        int randomnumber;
-        int isGreater();
         
-        
-        int greater_or_not;
         int getRdnum();
         
         ofstream outputFile1;
         outputFile1.open("random.txt");
         
         randomnum = getRdnum();
+        cout << randomnum << endl;
         outputFile1 << randomnum << endl;
 
         if (i == 1)
         {
             ofstream numbersFile;
-            numbersFile.open("numbers.txt");
+            numbersFile.open("numbers.txt", ios::app);
             numbersFile << randomnum << "\n";
         }
         else 
@@ -49,10 +50,12 @@ int main()
             if (randomnum > old_random)
             {
                 ofstream numbersFile;
-                numbersFile.open("numbers.txt");
+                numbersFile.open("numbers.txt", ios::app);
                 numbersFile << randomnum << "\n";
+                numbersFile.close();
             }
         }
+        oldnumber << randomnum;
         
 
     
