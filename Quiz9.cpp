@@ -74,6 +74,10 @@ ifstream readfile;
     else{
       FalseOrTrue = false;
     }
+      if (FalseOrTrue = false)
+      {
+        cout << " No one has a salary of more than 100k";
+      }
     }
   
 
