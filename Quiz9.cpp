@@ -21,33 +21,35 @@ string depName;
 Date date;
 };
 
-void construct(EmpRecord&);
+void construct(EmpRecord &);
 
 main(){
   EmpRecord employee;
   construct(employee);
+  
+
+  
+
+void construct(EmpRecord &p){
   
   ifstream readfile;
   readfile.open("employee.txt");
   string line;
   int num;
   string temp;
-  
+  while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >> p.date.month >> p.date.day >> p.date.year)
+    {  
+  cout << p.id<< " ";
+  cout << p.name.fName<< " ";
+  cout << p.name.lName<< " ";
+  cout << p.salary<< " ";
+  cout << p.depName<< " ";
+  cout << p.date.month<< " ";
+  cout << p.date.day<< " ";
+  cout << p.date.year<< endl;
+    }
 
-void construct(EmpRecord &p){
-  while (readfile >> employee.id >> employee.name.fName >> employee.name.lName >> employee.salary >> employee.depName >> employee.date.month >> employee.date.day >> employee.date.year)
-    {
-}
 
-  
-  cout << employee.id<< " ";
-  cout << employee.name.fName<< " ";
-  cout << employee.name.lName<< " ";
-  cout << employee.salary<< " ";
-  cout << employee.depName<< " ";
-  cout << employee.date.month<< " ";
-  cout << employee.date.day<< " ";
-  cout << employee.date.year<< endl;
 
     }
 
