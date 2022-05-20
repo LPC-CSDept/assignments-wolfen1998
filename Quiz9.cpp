@@ -23,3 +23,25 @@ int salary;
 string depName;
 Date date;
 };
+
+main ()
+{
+  EmpRecord employee;
+  ifstream readfile;
+  readfile.open("text.txt");
+  string line;
+  int num;
+  string temp;
+  while (readfile >> employee.id >> employee.name.fName >> employee.name.lName >> employee.salary >> employee.depName >> employee.date.month >> employee.date.day >> employee.date.year)
+    {
+      cout << "These are the contents of the textfile " << endl;
+      cout << employee.id<< " ";
+      cout << employee.name.fName<< " ";
+      cout << employee.name.lName<< " ";
+      cout << employee.salary<< " ";
+      cout << employee.depName<< " ";
+      cout << employee.date.month<< " ";
+      cout << employee.date.day<< " ";
+      cout << employee.date.year<< endl; 
+    }
+}
