@@ -22,10 +22,12 @@ Date date;
 };
 
 void construct(EmpRecord &);
+void findEmpSalary(EmpRecord);
 
 main(){
   EmpRecord employee;
   construct(employee);
+  findEmpSalary(employee)
   }
 
   
@@ -48,7 +50,10 @@ void construct(EmpRecord &p){
   cout << p.date.day<< " ";
   cout << p.date.year<< endl;
     }
-
+  void findEmpSalary(EmpRecord p)
+  {
+    
+  }
 
 
     }
