@@ -1,20 +1,17 @@
-#include < iostream >
-#include < stream>
+#include <iostream>
+#include <fstream>
 using namespace std;
-
 struct Name
 {
   string fName;
   string lName;
 };
-
 struct Date
 {
 string month;
 int day;
 int year;
 };
-
 struct EmpRecord
 {
 int id;
@@ -23,9 +20,7 @@ int salary;
 string depName;
 Date date;
 };
-
-main ()
-{
+main(){
   EmpRecord employee;
   ifstream readfile;
   readfile.open("text.txt");
@@ -34,14 +29,23 @@ main ()
   string temp;
   while (readfile >> employee.id >> employee.name.fName >> employee.name.lName >> employee.salary >> employee.depName >> employee.date.month >> employee.date.day >> employee.date.year)
     {
-      cout << "These are the contents of the textfile " << endl;
-      cout << employee.id<< " ";
-      cout << employee.name.fName<< " ";
-      cout << employee.name.lName<< " ";
-      cout << employee.salary<< " ";
-      cout << employee.depName<< " ";
-      cout << employee.date.month<< " ";
-      cout << employee.date.day<< " ";
-      cout << employee.date.year<< endl; 
+
+
+  
+  cout << employee.id<< " ";
+  cout << employee.name.fName<< " ";
+  cout << employee.name.lName<< " ";
+  cout << employee.salary<< " ";
+  cout << employee.depName<< " ";
+  cout << employee.date.month<< " ";
+  cout << employee.date.day<< " ";
+  cout << employee.date.year<< endl;
+
     }
+
+  
+
+
+
+    
 }
