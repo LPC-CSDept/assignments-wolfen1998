@@ -23,11 +23,13 @@ Date date;
 
 void construct(EmpRecord &);
 void findEmpSalary(EmpRecord);
+void findDepartment(EmpRecord);
 
 main(){
   EmpRecord employee;
   construct(employee);
   findEmpSalary(employee);
+  findDepartment(employee);
   }
 
   
@@ -52,7 +54,7 @@ void construct(EmpRecord &p){
     }
   readfile.close();
   }
-  void findEmpSalary(EmpRecord p)
+void findEmpSalary(EmpRecord p)
   {
 ifstream readfile;
   readfile.open("employee.txt");
@@ -80,10 +82,29 @@ ifstream readfile;
 
     
     
-  
+  readfile.close();
   }
 
+void findDepartment(EmpRecord p)
+{
+  ifstream readfile;
+  readfile.open("employee.txt");
+  string line;
+  int num;
+  string temp;
+  while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >>   p.date.month >> p.date.day >> p.date.year)
+    {
+      if (p.depName == "Computer")
+      {
+        cout << p.name.fName << " " << p.name.lName << " "<< "works in Computer Department"<<endl;
+      }
+    }
 
+
+
+
+  
+}
     
 
   
