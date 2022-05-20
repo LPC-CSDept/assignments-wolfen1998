@@ -23,7 +23,7 @@ Date date;
 main(){
   EmpRecord employee;
   ifstream readfile;
-  readfile.open("text.txt");
+  readfile.open("employee.txt");
   string line;
   int num;
   string temp;
