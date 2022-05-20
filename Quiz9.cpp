@@ -61,25 +61,24 @@ ifstream readfile;
   string line;
   int num;
   string temp;
+  bool FalseOrTrue;
+  FalseOrTrue = false;
   while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >> p.date.month >> p.date.day >> p.date.year)
     {
         bool FalseOrTrue;
    if (p.salary > 100000)
    {
      
-     cout << p.name.fName << " " << p.name.lName << " "<< "has a salary of more than $100,000" <<endl;
+     cout << p.name.fName << " " << p.name.lName << " "<< "has a salary of more than $100,000\n" <<endl;
      FalseOrTrue = true;
      
    }
-    else{
-      FalseOrTrue = false;
+      
     }
-      if (FalseOrTrue = false)
+  if (FalseOrTrue == false)
       {
-        cout << " No one has a salary of more than 100k";
+        cout << "\nNo one has a salary of more than 100k. \n \n";
       }
-    }
-  
 
 
 
@@ -91,19 +90,26 @@ ifstream readfile;
 
 void findDepartment(EmpRecord p)
 {
+  
   ifstream readfile;
   readfile.open("employee.txt");
   string line;
   int num;
   string temp;
+  bool FalseOrTrue;
+  FalseOrTrue = false;
   while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >>   p.date.month >> p.date.day >> p.date.year)
     {
       if (p.depName == "Computer")
       {
+        FalseOrTrue = true;
         cout << p.name.fName << " " << p.name.lName << " "<< "works in Computer Department"<<endl;
       }
     }
-
+  if (FalseOrTrue == false)
+  {
+    cout << "No one works in Computer department in here. \n " << endl;
+  }
 
 
 

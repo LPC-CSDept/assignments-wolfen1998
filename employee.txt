@@ -1,7 +1,7 @@
-400 John Doe 125125 Computer Jan 31 2020
-125 Johnny Wolf 50000 Accounting Jan 31 2022
+400 John Doe 125120 Computer1 Jan 31 2020
+125 Johnny Wolf 500005 Accounting Jan 31 2022
 
 300 Bruce  Willis 200000 Accounting Jan 31 2022
 
-200 Shane  Warne 300000 Computer Jan 31 2020
-125 Gregory House  500000 Accounting Jan 31 2022
+200 Shane  Warne 300000 Computer1 Jan 31 2020
+125 Gregory House  50000 Accounting Jan 31 2022
