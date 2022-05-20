@@ -26,7 +26,7 @@ void construct(EmpRecord &);
 main(){
   EmpRecord employee;
   construct(employee);
-  
+  }
 
   
 
@@ -58,4 +58,3 @@ void construct(EmpRecord &p){
 
 
     
-}
