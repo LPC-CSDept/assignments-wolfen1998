@@ -2,6 +2,7 @@
 #include <fstream>
 using namespace std;
 struct Name
+
 {
   string fName;
   string lName;
@@ -20,6 +21,8 @@ int salary;
 string depName;
 Date date;
 };
+void constructStructure(&EmpRecord);
+
 main(){
   EmpRecord employee;
   ifstream readfile;
