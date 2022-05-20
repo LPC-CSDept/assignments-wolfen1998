@@ -56,6 +56,7 @@ void construct(EmpRecord &p){
   }
 void findEmpSalary(EmpRecord p)
   {
+    
 ifstream readfile;
   readfile.open("employee.txt");
   string line;
@@ -63,14 +64,15 @@ ifstream readfile;
   string temp;
   bool FalseOrTrue;
   FalseOrTrue = false;
+  cout << " \n";
   while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >> p.date.month >> p.date.day >> p.date.year)
     {
-        bool FalseOrTrue;
    if (p.salary > 100000)
    {
+     FalseOrTrue = true;
      
      cout << p.name.fName << " " << p.name.lName << " "<< "has a salary of more than $100,000\n" <<endl;
-     FalseOrTrue = true;
+     
      
    }
       
@@ -98,14 +100,16 @@ void findDepartment(EmpRecord p)
   string temp;
   bool FalseOrTrue;
   FalseOrTrue = false;
+  cout << " \n";
   while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >>   p.date.month >> p.date.day >> p.date.year)
     {
       if (p.depName == "Computer")
       {
         FalseOrTrue = true;
-        cout << p.name.fName << " " << p.name.lName << " "<< "works in Computer Department"<<endl;
+        cout << p.name.fName << " " << p.name.lName << " "<< "works in Computer Department\n"<<endl;
       }
     }
+  readfile.close();
   if (FalseOrTrue == false)
   {
     cout << "No one works in Computer department in here. \n " << endl;
