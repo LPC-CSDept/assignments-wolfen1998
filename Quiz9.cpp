@@ -27,7 +27,7 @@ void findEmpSalary(EmpRecord);
 main(){
   EmpRecord employee;
   construct(employee);
-  findEmpSalary(employee)
+  findEmpSalary(employee);
   }
 
   
@@ -48,15 +48,43 @@ void construct(EmpRecord &p){
   cout << p.depName<< " ";
   cout << p.date.month<< " ";
   cout << p.date.day<< " ";
-  cout << p.date.year<< endl;
+  cout << p.date.year<<"\n"<< endl;
     }
+  readfile.close();
+  }
   void findEmpSalary(EmpRecord p)
   {
+ifstream readfile;
+  readfile.open("employee.txt");
+  string line;
+  int num;
+  string temp;
+  while (readfile >> p.id >> p.name.fName >> p.name.lName >> p.salary >> p.depName >> p.date.month >> p.date.day >> p.date.year)
+    {
+        bool FalseOrTrue;
+   if (p.salary > 100000)
+   {
+     
+     cout << p.name.fName << " " << p.name.lName << " "<< "has a salary of more than $100,000" <<endl;
+     FalseOrTrue = true;
+     
+   }
+    else{
+      FalseOrTrue = false;
+    }
+    }
+  
+
+
+
+
     
+    
+  
   }
 
 
-    }
+    
 
   
 
