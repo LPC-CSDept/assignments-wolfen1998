@@ -20,16 +20,24 @@ int salary;
 string depName;
 Date date;
 };
+
+void construct(EmpRecord&);
+
 main(){
   EmpRecord employee;
+  construct(employee);
+  
   ifstream readfile;
   readfile.open("employee.txt");
   string line;
   int num;
   string temp;
+  
+
+void construct(EmpRecord &p){
   while (readfile >> employee.id >> employee.name.fName >> employee.name.lName >> employee.salary >> employee.depName >> employee.date.month >> employee.date.day >> employee.date.year)
     {
-
+}
 
   
   cout << employee.id<< " ";
