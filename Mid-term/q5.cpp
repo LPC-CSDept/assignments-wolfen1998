@@ -94,8 +94,11 @@ void repeat(){
   getInput(n1,n2);
   cout << "The two numbers are: "<< n1 << " " << n2 << endl;
   check = isSame(n1,n2);
+
   if (check == true)
   {
+    //if n1 and n2 are the same, check will be equal to true and the user will be
+    // informed that the numbers are the same and  the program will end.
     cout << "The numbers are the same." << endl;
     exit(0);
   }
