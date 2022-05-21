@@ -47,7 +47,8 @@ int main(){
   
   cin >> repeatOrNot;
 
-  
+  //for some reason here the while loop would continue even if repeatOrNot was not equal to "y". 
+  //So I used if condition and it works perfectly fine
   if (repeatOrNot == "y")
     {
       //repeat() contains all code in main function.
@@ -84,7 +85,8 @@ void intDivision(int &n1, int &n2, int &result){
     result = n2/n1;
   }
 }
-
+// since i can't call the main() so I copied everything in main function and put it here. If the user wants the program to run again, then the main() will call repeat function
+// which will call itself if the user wills so
 void repeat(){
    
   bool check;
