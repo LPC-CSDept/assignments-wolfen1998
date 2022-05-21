@@ -10,7 +10,20 @@ void repeat();
 
 
 int main(){
+  /* 
+   I first initialize two ints, n1 and n2. I send these two variables as parameters
+   to function getInput which will ask the user to assign numbers to these variables
+   then I send these two variables to IsSame() to see if the numbers are the same 
+   if they are the same then the program will exit.
+   then I call intDivision which will divide the two numbers accordingly and 
+   return the value to the variable that called it
+   then I call fileWrite() to write the file to the text file.
+   Then i ask the user if the program should be repeated, if the end user types y
+   the code will repeat itself
+
+
    
+   */
   bool check;
   int result;
   
@@ -37,6 +50,7 @@ int main(){
   
   if (repeatOrNot == "y")
     {
+      //repeat() contains all code in main function.
     repeat();
     }
   
@@ -106,6 +120,7 @@ void repeat(){
 void fileWrite(int result)
   {
   ofstream writeToFile;
+  //opens the file in append mode
   writeToFile.open("numbers.txt", ios_base::app);
   writeToFile << result << "\n";
   writeToFile.close();
