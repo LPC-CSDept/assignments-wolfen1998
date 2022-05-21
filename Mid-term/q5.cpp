@@ -23,10 +23,18 @@ int main(){
   }
   intDivision(n1,n2,result);
   cout<< "The integer of the two given numbers is: " << result << endl;
-  cout << " the number will be written to text file: numbers.txt" << endl;
+  cout << "The number will be written to text file: numbers.txt" << endl;
   ofstream writeToFile;
   writeToFile.open("numbers.txt");
+  writeToFile << result;
+  cout << "type y to repeat the program. Type anything else to quit" << endl;
+  string repeatOrNot;
+  cin >> repeatOrNot;
   
+  while (repeatOrNot != "y")
+    {
+    main();
+    }
   
 }
 
