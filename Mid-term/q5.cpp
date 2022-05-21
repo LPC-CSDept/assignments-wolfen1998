@@ -32,8 +32,8 @@ int main(){
   string repeatOrNot;
   cin >> repeatOrNot;
 
-  
-  while (repeatOrNot != "y")
+  repeatOrNot = "n";
+  while (repeatOrNot == "y")
     {
     repeat();
     }
