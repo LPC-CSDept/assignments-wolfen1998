@@ -1,14 +1,17 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 void getInput(int &, int &);
 bool isSame(int,int);
-void intDivision(int,int);
+void intDivision(int &, int &, int &);
 void fileWrite(int,int);
 
 
 int main(){
   bool check;
+  int result;
+  
   int n1,n2;
   getInput(n1,n2);
   cout << "The two numbers are: "<< n1 << " " << n2 << endl;
@@ -18,11 +21,11 @@ int main(){
     cout << "The numbers are the same." << endl;
     exit(0);
   }
-  else
-  {
-    check == false;
-  }
-
+  intDivision(n1,n2,result);
+  cout<< "The integer of the two given numbers is: " << result << endl;
+  cout << " the number will be written to text file: numbers.txt" << endl;
+  ofstream writeToFile;
+  writeToFile.open("numbers.txt");
   
   
 }
@@ -43,5 +46,15 @@ bool isSame(int n1, int n2)
   else
   {
     return false;
+  }
+}
+void intDivision(int &n1, int &n2, int &result){
+  if (n1 > n2)
+  {
+    result = n1/n2;
+  }
+  else
+  {
+    result = n2/n1;
   }
 }
