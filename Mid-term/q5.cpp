@@ -5,11 +5,12 @@ using namespace std;
 void getInput(int &, int &);
 bool isSame(int,int);
 void intDivision(int &, int &, int &);
-void fileWrite(int,int);
+void fileWrite(int);
 void repeat();
 
 
 int main(){
+   
   bool check;
   int result;
   
@@ -25,15 +26,16 @@ int main(){
   intDivision(n1,n2,result);
   cout<< "The integer of the two given numbers is: " << result << endl;
   cout << "The number will be written to text file: numbers.txt" << endl;
-  ofstream writeToFile;
-  writeToFile.open("numbers.txt");
-  writeToFile << result;
+  fileWrite(result);
+
   cout << "Type y to repeat the program. Type anything else to quit" << endl;
   string repeatOrNot;
+  repeatOrNot = "n";
+  
   cin >> repeatOrNot;
 
-  repeatOrNot = "n";
-  while (repeatOrNot == "y")
+  
+  if (repeatOrNot == "y")
     {
     repeat();
     }
@@ -70,6 +72,7 @@ void intDivision(int &n1, int &n2, int &result){
 }
 
 void repeat(){
+   
   bool check;
   int result;
   
@@ -85,17 +88,25 @@ void repeat(){
   intDivision(n1,n2,result);
   cout<< "The integer of the two given numbers is: " << result << endl;
   cout << "The number will be written to text file: numbers.txt" << endl;
-  ofstream writeToFile;
-  writeToFile.open("numbers.txt");
-  writeToFile << result;
+  fileWrite(result);
+
   cout << "Type y to repeat the program. Type anything else to quit" << endl;
   string repeatOrNot;
+  repeatOrNot = "n";
+  
   cin >> repeatOrNot;
 
   
-  while (repeatOrNot != "y")
+  if (repeatOrNot == "y")
     {
-    repeat();;
+    repeat();
     }
   
 }
+void fileWrite(int result)
+  {
+  ofstream writeToFile;
+  writeToFile.open("numbers.txt");
+  writeToFile << result;
+  writeToFile.close();
+  }
