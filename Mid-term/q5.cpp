@@ -106,7 +106,7 @@ void repeat(){
 void fileWrite(int result)
   {
   ofstream writeToFile;
-  writeToFile.open("numbers.txt");
-  writeToFile << result;
+  writeToFile.open("numbers.txt", ios_base::app);
+  writeToFile << result << "\n";
   writeToFile.close();
   }
